@@ -1,0 +1,910 @@
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 400;
+}
+
+.navbar {
+    height: 120px;
+    background-color: white !important;
+    z-index: 10000 !important;
+    position: fixed !important;
+    top: 0;
+    width: 100%;
+    border-bottom: 1px solid #EBEBEB !important;
+}
+
+.nav-container {
+    width: 100%;
+    padding: 0 40px;
+}
+
+.nav-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 120px;
+    max-width: 2520px;
+    margin: 0 auto;
+}
+
+/* Airbnb Brand */
+.navbar-brand {
+    font-size: 1.5rem !important;
+    font-weight: 700 !important;
+    color: #FF385C !important;
+    text-decoration: none;
+    gap: 10px;
+}
+
+.brand-icon {
+    font-size: 2.25rem;
+    color: #FF385C;
+}
+
+.brand-text {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #FF385C;
+}
+
+/* Airbnb Search Bar */
+.search-bar {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.search-btn-wrapper {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.search-btn-compact {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 14px 20px;
+    border: 1px solid #DDDDDD;
+    border-radius: 40px;
+    background: white;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-size: 15px;
+    font-weight: 600;
+    color: #222222;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.search-btn-compact:hover {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
+}
+
+.search-icon-compact {
+    background: #FF385C;
+    color: white;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+}
+
+.search-btn-expanded {
+    display: flex;
+    align-items: center;
+    padding: 8px 8px 8px 20px;
+    border: 1px solid #DDDDDD;
+    border-radius: 40px;
+    background: white;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.08);
+    min-width: 650px;
+}
+
+.search-item {
+    display: flex;
+    flex-direction: column;
+    padding: 12px 20px;
+    cursor: pointer;
+    border-radius: 32px;
+    transition: background 0.2s;
+    flex: 1;
+}
+
+.search-item:hover {
+    background: #EBEBEB;
+}
+
+.search-item label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #222222;
+    margin-bottom: 3px;
+}
+
+.search-item input {
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 14px;
+    font-weight: 500;
+    color: #222222;
+    padding: 0;
+}
+
+.search-item input::placeholder {
+    color: #717171;
+    font-weight: 400;
+}
+
+.search-divider {
+    width: 1px;
+    height: 32px;
+    background: #DDDDDD;
+    align-self: center;
+}
+
+.search-item-last {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+    padding-right: 8px;
+}
+
+.search-item-last > div {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.search-icon-large {
+    background: linear-gradient(to right, #E61E4D 0%, #E31C5F 50%, #D70466 100%);
+    color: white;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.2s;
+    box-shadow: 0 2px 8px rgba(230, 30, 77, 0.3);
+}
+
+.search-icon-large:hover {
+    transform: scale(1.04);
+    box-shadow: 0 4px 12px rgba(230, 30, 77, 0.4);
+}
+
+/* Host Link */
+.host-link {
+    font-size: 16px;
+    font-weight: 600;
+    color: #222222;
+    text-decoration: none;
+    padding: 12px 16px;
+    border-radius: 22px;
+    transition: background 0.2s;
+}
+
+.host-link:hover {
+    background: #F7F7F7;
+    color: #222222;
+}
+
+/* User Menu Button */
+.user-menu-btn {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 6px 6px 6px 12px;
+    border: 1px solid #DDDDDD;
+    border-radius: 21px;
+    background: white;
+    cursor: pointer;
+    transition: box-shadow 0.2s;
+    font-size: 14px;
+    color: #717171;
+}
+
+.user-menu-btn:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+.user-menu-btn .fa-user-circle {
+    font-size: 30px;
+    color: #717171;
+}
+
+.f-info-links a{
+    text-decoration: none;
+    color: #222222;
+}
+
+.f-info-links a:hover{
+    text-decoration: underline;
+}
+
+.f-info{
+    background-color: #ebebeb;
+    height: 8rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+   text-align: center;
+
+}
+
+.f-info-links,.f-info-socials, .f-info-brand{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.f-info-socials i{
+     font-size: 1.3rem;
+  margin-left: 1.3rem;
+}
+
+.listing-card {
+    transition: all 0.3s ease;
+}
+
+.listing-card:hover {
+    opacity: 0.8;
+    transform: translateY(-5px);
+}
+
+.add-btn{
+    background-color:  #fe424d !important;
+    border: none !important;
+}
+
+.flash-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 10000;
+}
+
+.flash-message {
+  min-width: 320px;
+  max-width: 420px;
+  padding: 0.75rem 1.25rem;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  font-weight: 500;
+}
+
+.flash-icon {
+  font-size: 1.1rem;
+}
+
+.alert-success {
+  background-color: #e9f9f0;
+  color: #157347;
+  border: none;
+}
+
+.alert-danger {
+  background-color: #fdecec;
+  color: #b02a37;
+  border: none;
+}
+
+.btn-close {
+  margin-left: auto;
+  transform: scale(0.85);
+}
+
+/* Signup Form Styles */
+.signup-container {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.signup-container h3 {
+    color: #222222;
+    font-weight: 600;
+}
+
+.signup-btn {
+    background-color: #fe424d !important;
+    border: none;
+    padding: 0.75rem;
+    font-weight: 500;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.signup-btn:hover {
+    background-color: #e63946 !important;
+    transform: translateY(-2px);
+}
+
+.form-control {
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    padding: 0.75rem;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #fe424d;
+    box-shadow: 0 0 0 0.2rem rgba(254, 66, 77, 0.25);
+}
+
+.form-label {
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+/* Airbnb-style User Menu */
+.user-menu {
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    padding: 8px 12px;
+    background: white;
+    transition: all 0.2s ease;
+    color: #717171 !important;
+    text-decoration: none;
+}
+
+.user-menu:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+    color: #222222 !important;
+}
+
+.user-menu i {
+    font-size: 16px;
+}
+
+.nav-item.dropdown {
+    z-index: 9999;
+    position: relative;
+}
+
+.user-dropdown {
+    border-radius: 12px;
+    border: none;
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.12);
+    padding: 8px 0;
+    min-width: 200px;
+    margin-top: 8px;
+    z-index: 9999 !important;
+    position: absolute !important;
+}
+
+.user-dropdown .dropdown-item {
+    padding: 12px 20px;
+    font-weight: 400;
+    color: #222222;
+    transition: background-color 0.2s ease;
+}
+
+.user-dropdown .dropdown-item:hover {
+    background-color: #f7f7f7;
+    color: #222222;
+}
+
+.user-dropdown .dropdown-header {
+    padding: 12px 20px 8px 20px;
+    font-weight: 600;
+    color: #222222;
+    font-size: 14px;
+}
+
+.user-dropdown .dropdown-divider {
+    margin: 8px 0;
+    border-color: #ebebeb;
+}
+
+.navbar-brand {
+    font-size: 1.5rem !important;
+    color: #fe424d !important;
+    font-weight: 700 !important;
+}
+
+/* Category Filter Bar */
+.category-bar {
+    position: fixed;
+    top: 120px;
+    left: 0;
+    right: 0;
+    background: white;
+    z-index: 9999;
+    padding: 16px 0;
+}
+
+.category-container {
+    max-width: 2520px;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.category-scroll {
+    display: flex;
+    gap: 32px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    flex: 1;
+    padding: 4px 0;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.category-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+.category-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 0;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    transition: all 0.2s;
+    min-width: fit-content;
+    text-decoration: none;
+    color: #717171;
+}
+
+.category-item:hover {
+    color: #222222;
+    border-bottom-color: #DDDDDD;
+}
+
+.category-item.active {
+    color: #222222;
+    border-bottom-color: #222222;
+}
+
+.category-icon {
+    font-size: 24px;
+    opacity: 0.7;
+}
+
+.category-item.active .category-icon,
+.category-item:hover .category-icon {
+    opacity: 1;
+}
+
+.category-label {
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.filter-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 16px;
+    border: 1px solid #DDDDDD;
+    border-radius: 12px;
+    background: white;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-size: 14px;
+    font-weight: 600;
+    color: #222222;
+}
+
+.filter-btn:hover {
+    border-color: #222222;
+}
+
+body {
+    padding-top: 140px;
+}
+
+body.listings-page {
+    padding-top: 210px;
+}
+
+/* Hide search bar on home page */
+body.home-page .search-bar {
+    display: none !important;
+}
+
+body.home-page {
+    padding-top: 120px;
+}
+
+/* Star Rating System */
+.star-rating {
+    display: flex;
+    gap: 5px;
+    font-size: 1.5rem;
+}
+
+.star-rating .star {
+    color: #ddd;
+    cursor: pointer;
+    transition: color 0.2s ease;
+    user-select: none;
+}
+
+.star-rating .star:hover,
+.star-rating .star.active {
+    color: #ffc107;
+}
+
+.star-rating .star:hover ~ .star {
+    color: #ddd;
+}
+
+.star-rating:hover .star {
+    color: #ddd;
+}
+
+.star-rating:hover .star:hover,
+.star-rating:hover .star:hover ~ .star {
+    color: #ffc107;
+}
+
+.star-rating input[type="radio"] {
+    display: none;
+}
+
+/* Airbnb-style Map */
+.airbnb-map {
+    height: 480px;
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+    border: 1px solid #dddddd;
+    position: relative;
+}
+
+.map-container {
+    margin-bottom: 2rem;
+}
+
+.map-container h4 {
+    font-weight: 600;
+    color: #222222;
+    margin-bottom: 1.5rem;
+}
+
+/* Airbnb-style Booking Card */
+.card {
+    border-radius: 12px !important;
+    border: 1px solid #dddddd !important;
+}
+
+.card-body {
+    padding: 24px !important;
+}
+
+/* Airbnb-style Progress Bars */
+.progress {
+    background-color: #f0f0f0;
+    border-radius: 2px;
+}
+
+.progress-bar {
+    background-color: #222222 !important;
+    border-radius: 2px;
+}
+
+/* Review Cards */
+.review-item {
+    padding: 0;
+}
+
+.review-item .rounded-circle {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+}
+
+/* Airbnb-style Buttons */
+.btn-outline-dark {
+    border-color: #222222;
+    color: #222222;
+    font-weight: 500;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+
+.btn-outline-dark:hover {
+    background-color: #222222;
+    border-color: #222222;
+    color: white;
+    transform: translateY(-1px);
+}
+
+.btn-outline-secondary {
+    border-color: #717171;
+    color: #717171;
+    font-weight: 500;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+
+.btn-outline-secondary:hover {
+    background-color: #717171;
+    border-color: #717171;
+    color: white;
+    transform: translateY(-1px);
+}
+
+/* Airbnb-style Form Elements */
+.form-control {
+    border-radius: 8px;
+    border: 1px solid #b0b0b0;
+    padding: 12px;
+    font-size: 16px;
+    transition: all 0.2s ease;
+}
+
+.form-control:focus {
+    border-color: #222222;
+    box-shadow: 0 0 0 2px rgba(34, 34, 34, 0.1);
+}
+
+.form-select {
+    border-radius: 8px;
+    border: 1px solid #b0b0b0;
+    padding: 12px;
+    font-size: 16px;
+}
+
+/* Sticky Booking Card */
+@media (min-width: 992px) {
+    .sticky-top {
+        position: sticky !important;
+        top: 140px !important;
+    }
+}
+
+/* Responsive Map */
+@media (max-width: 768px) {
+    .airbnb-map {
+        height: 300px;
+        margin-bottom: 1rem;
+    }
+    
+    .map-container {
+        margin-top: 2rem;
+    }
+}
+
+/* Image Styling */
+.img-fluid {
+    border-radius: 12px !important;
+}
+
+/* Typography Improvements */
+h1, h2, h3, h4, h5, h6 {
+    color: #222222;
+}
+
+.text-muted {
+    color: #717171 !important;
+}
+
+/* Price Display */
+.card-body h2 {
+    font-size: 1.75rem;
+    font-weight: 600;
+}
+
+/* Date Inputs Styling */
+input[type="date"] {
+    color: #222222;
+    font-weight: 500;
+}
+
+/* Review Stats */
+.progress {
+    height: 4px !important;
+}
+
+/* Mapbox Controls Styling */
+.mapboxgl-ctrl-group {
+    border-radius: 8px !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+}
+
+.mapboxgl-ctrl button {
+    border-radius: 6px !important;
+}
+
+/* Custom Marker Styling */
+.mapboxgl-marker {
+    cursor: pointer;
+}
+
+.custom-marker {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    perspective: 1000px;
+}
+
+.marker-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.marker-inner.flipped {
+    transform: rotateY(180deg);
+}
+
+.marker-front,
+.marker-back {
+    width: 40px;
+    height: 40px;
+    background-color: #fe424d;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 18px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    position: absolute;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+.marker-back {
+    transform: rotateY(180deg);
+    font-size: 24px;
+}
+
+.marker-back i {
+    color: white !important;
+}
+
+.custom-marker:hover .marker-front,
+.custom-marker:hover .marker-back {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* Airbnb-style Popup */
+.mapboxgl-popup-content {
+    border-radius: 12px !important;
+    padding: 0 !important;
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.28) !important;
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+}
+
+.mapboxgl-popup-tip {
+    border-top-color: white !important;
+}
+
+.airbnb-popup .mapboxgl-popup-content {
+    min-width: 200px;
+}
+
+/* Loading State for Map */
+.map-loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 480px;
+    background-color: #f8f9fa;
+    border-radius: 12px;
+    color: #717171;
+}
+
+/* Wishlist Heart Button */
+.btn-light {
+    background-color: rgba(255, 255, 255, 0.9) !important;
+    border: none !important;
+    backdrop-filter: blur(10px);
+    transition: all 0.2s ease;
+}
+
+.btn-light:hover {
+    background-color: white !important;
+    transform: scale(1.05);
+}
+
+.btn-light:hover .fa-heart {
+    color: #fe424d !important;
+}
+
+/* Image Container Improvements */
+.position-relative img {
+    transition: transform 0.3s ease;
+}
+
+.position-relative:hover img {
+    transform: scale(1.02);
+}
+
+/* Enhanced Card Shadows */
+.shadow-lg {
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Improved Typography */
+.fw-bold {
+    font-weight: 600 !important;
+}
+
+.fw-semibold {
+    font-weight: 500 !important;
+}
+
+/* Better Spacing */
+.lh-lg {
+    line-height: 1.8 !important;
+}
+
+.lh-base {
+    line-height: 1.6 !important;
+}
+
+/* Enhanced Hover Effects */
+.listing-card {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.listing-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+/* Improved Button Styles */
+.add-btn {
+    background: linear-gradient(135deg, #fe424d 0%, #e63946 100%) !important;
+    border: none !important;
+    font-weight: 500 !important;
+    transition: all 0.3s ease !important;
+    box-shadow: 0 4px 15px rgba(254, 66, 77, 0.3);
+}
+
+.add-btn:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 8px 25px rgba(254, 66, 77, 0.4) !important;
+}
+
+/* Responsive Improvements */
+@media (max-width: 576px) {
+    .container {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+    
+    .card-body {
+        padding: 20px !important;
+    }
+    
+    .sticky-top {
+        position: relative !important;
+        top: auto !important;
+        margin-top: 2rem;
+    }
+}
+

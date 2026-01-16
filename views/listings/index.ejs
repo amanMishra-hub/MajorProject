@@ -1,0 +1,97 @@
+<% layout('/layout/boilerplate') -%>
+
+<script>
+  document.body.classList.add('listings-page');
+</script>
+
+<!-- Category Filter Bar -->
+<div class="category-bar">
+  <div class="category-container">
+    <div class="category-scroll">
+      <a href="/listings" class="category-item active">
+        <i class="fas fa-globe category-icon"></i>
+        <span class="category-label">All</span>
+      </a>
+      <a href="/listings?category=beach" class="category-item">
+        <i class="fas fa-umbrella-beach category-icon"></i>
+        <span class="category-label">Beaches</span>
+      </a>
+      <a href="/listings?category=mountain" class="category-item">
+        <i class="fas fa-mountain category-icon"></i>
+        <span class="category-label">Mountains</span>
+      </a>
+      <a href="/listings?category=city" class="category-item">
+        <i class="fas fa-city category-icon"></i>
+        <span class="category-label">Iconic Cities</span>
+      </a>
+      <a href="/listings?category=pool" class="category-item">
+        <i class="fas fa-swimming-pool category-icon"></i>
+        <span class="category-label">Amazing Pools</span>
+      </a>
+      <a href="/listings?category=castle" class="category-item">
+        <i class="fas fa-chess-rook category-icon"></i>
+        <span class="category-label">Castles</span>
+      </a>
+      <a href="/listings?category=camping" class="category-item">
+        <i class="fas fa-campground category-icon"></i>
+        <span class="category-label">Camping</span>
+      </a>
+      <a href="/listings?category=farm" class="category-item">
+        <i class="fas fa-tractor category-icon"></i>
+        <span class="category-label">Farms</span>
+      </a>
+      <a href="/listings?category=arctic" class="category-item">
+        <i class="fas fa-snowflake category-icon"></i>
+        <span class="category-label">Arctic</span>
+      </a>
+      <a href="/listings?category=desert" class="category-item">
+        <i class="fas fa-sun category-icon"></i>
+        <span class="category-label">Desert</span>
+      </a>
+      <a href="/listings?category=island" class="category-item">
+        <i class="fas fa-umbrella-beach category-icon"></i>
+        <span class="category-label">Islands</span>
+      </a>
+      <a href="/listings?category=lake" class="category-item">
+        <i class="fas fa-water category-icon"></i>
+        <span class="category-label">Lakefront</span>
+      </a>
+    </div>
+    <button class="filter-btn">
+      <i class="fas fa-sliders-h"></i>
+      <span>Filters</span>
+    </button>
+  </div>
+</div>
+
+<div class="container-fluid" style="margin-top: 48px;">
+  <div class="row g-4 mx-0">
+    <% for (let listing of allListings){ %>
+    <div class="col-lg-4 col-md-6 col-sm-12">
+      <a href="/listings/<%= listing._id %>" class="text-decoration-none">
+        <div class="card h-100 border-0 shadow-sm listing-card">
+          <img
+            src="<%= listing.image.url %>"
+            class="card-img-top"
+            alt="listing_image"
+            style="height: 250px; object-fit: cover; border-radius: 12px"
+            onerror="this.src='https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8aG90ZWxzfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60'"
+          />
+          <div class="card-body px-0 pb-0">
+            <h6 class="card-title mb-1 fw-semibold text-dark">
+              <%= listing.title %>
+            </h6>
+            <p class="text-muted mb-1 small">
+              <%= listing.location %>, <%= listing.country %>
+            </p>
+            <p class="mb-0 text-dark">
+              <strong>₹<%= listing.price.toLocaleString("en-in") %></strong>
+              night
+            </p>
+          </div>
+        </div>
+      </a>
+    </div>
+    <% } %>
+  </div>
+</div>

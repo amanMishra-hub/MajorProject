@@ -1,0 +1,38 @@
+<% layout("/layout/boilerplate") -%>
+
+<script>
+  document.body.classList.add('home-page');
+</script>
+
+<div class="hero-section text-center py-5">
+    <div class="container">
+        <h1 class="display-4 fw-bold mb-4">Welcome to Wanderlust</h1>
+        <p class="lead mb-4">Discover amazing places to stay around the world</p>
+        <% if (!currUser) { %>
+            <a href="/signup" class="btn btn-lg signup-btn me-3">Get Started</a>
+            <a href="/login" class="btn btn-outline-secondary btn-lg">Log In</a>
+        <% } else { %>
+            <a href="/listings" class="btn btn-lg signup-btn">Explore Listings</a>
+        <% } %>
+    </div>
+</div>
+
+<div class="container py-5">
+    <div class="row">
+        <div class="col-md-4 text-center mb-4">
+            <i class="fas fa-home fa-3x text-primary mb-3"></i>
+            <h4>Find Your Perfect Stay</h4>
+            <p>Browse through thousands of unique accommodations</p>
+        </div>
+        <div class="col-md-4 text-center mb-4">
+            <i class="fas fa-star fa-3x text-warning mb-3"></i>
+            <h4>Trusted Reviews</h4>
+            <p>Read reviews from verified guests</p>
+        </div>
+        <div class="col-md-4 text-center mb-4">
+            <i class="fas fa-shield-alt fa-3x text-success mb-3"></i>
+            <h4>Secure Booking</h4>
+            <p>Book with confidence on our secure platform</p>
+        </div>
+    </div>
+</div>

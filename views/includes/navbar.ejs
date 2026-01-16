@@ -1,0 +1,60 @@
+<nav class="navbar navbar-expand-md bg-white fixed-top">
+  <div class="nav-container">
+    <div class="nav-content">
+      <a class="navbar-brand d-flex align-items-center" href="/">
+        <i class="fa-solid fa-compass brand-icon"></i>
+        <span class="brand-text">wanderlust</span>
+      </a>
+      
+      <!-- Center Search Bar -->
+      <div class="search-bar d-none d-lg-flex" id="navSearchBar">
+        <div class="search-btn-wrapper">
+          <button class="search-btn-compact" id="searchCompact">
+            <span class="fw-semibold">Start your search</span>
+            <span class="search-icon-compact"><i class="fas fa-search"></i></span>
+          </button>
+          <div class="search-btn-expanded" id="searchExpanded" style="display: none;">
+            <div class="search-item">
+              <label>Where</label>
+              <input type="text" placeholder="Search destinations">
+            </div>
+            <div class="search-divider"></div>
+            <div class="search-item">
+              <label>Trending</label>
+              <input type="text" placeholder="Popular places">
+            </div>
+            <div class="search-divider"></div>
+            <div class="search-item search-item-last">
+              <label>Category</label>
+              <input type="text" placeholder="Beach, Mountain...">
+              <button class="search-icon-large"><i class="fas fa-search"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Right Menu -->
+      <div class="d-flex align-items-center gap-2">
+        <a href="/listings/new" class="host-link d-none d-lg-block">Wanderlust your home</a>
+        
+        <div class="nav-item dropdown">
+          <button class="user-menu-btn" data-bs-toggle="dropdown">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-user-circle"></i>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end user-dropdown">
+            <% if (!currUser) { %>
+              <li><a class="dropdown-item fw-semibold" href="/signup">Sign up</a></li>
+              <li><a class="dropdown-item" href="/login">Log in</a></li>
+            <% } else { %>
+              <li><a class="dropdown-item fw-semibold" href="/listings">My Listings</a></li>
+              <li><a class="dropdown-item" href="/listings/new">Host your home</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="/logout">Log out</a></li>
+            <% } %>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
